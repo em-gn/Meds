@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.meds">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,8 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/app_name">
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,11 +24,16 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".SignupActivity"
+        <activity android:name=".StartActivity"/>
+        <activity android:name=".SignupActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".ForgetActivity"/>
+        <activity android:name=".HealthSummaryActivity"/>
+        <activity android:name=".SearchActivity"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".DiagnosisActivity"/>
+        <activity android:name=".VerificationActivity"/>
 
-            android:label="@id/signup">
-        </activity>
 
     </application>
 
